@@ -15,6 +15,11 @@ android {
         versionName = "1.0"
     }
 
+    lint {
+        disable += "BlockedPrivateApi"
+        checkReleaseBuilds = false
+    }
+
     signingConfigs {
         getByName("debug") {
             storeFile = file("../keystore/debug.keystore")

@@ -25,10 +25,16 @@
 1. 下载最新 Release 的 APK
 2. 安装到设备
 3. 在 LSPosed 管理器中启用模块
-4. 设置作用域：
+4. 设置作用域（根据自身设备勾选）：
    - `system` — system_server（导航栏沉浸 + 键盘按钮删除）
    - `com.google.android.apps.nexuslauncher` — Pixel Launcher
-   - `com.bytedance.android.doubaoime` — 豆包输入法（键盘贴底）
+   - **你使用的输入法** — 例如：
+     - `com.bytedance.android.doubaoime` — 豆包输入法
+     - `com.sohu.inputmethod.sogou.xiaomi` — 搜狗输入法
+     - `com.baidu.input_mi` — 百度输入法
+     - `com.iflytek.inputmethod.miui` — 讯飞输入法
+     - `com.google.android.inputmethod.latin` — Gboard
+     - 其他输入法请根据自身情况勾选
 5. 重启设备
 
 ## Hook 原理
