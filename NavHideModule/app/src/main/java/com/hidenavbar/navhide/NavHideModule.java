@@ -58,9 +58,11 @@ public class NavHideModule extends XposedModule {
     public void onPackageLoaded(@NonNull PackageLoadedParam param) {
         String pkg = param.getPackageName();
         Log.i(TAG, "[ENTRY] onPackageLoaded pkg=" + pkg);
-        if ("com.google.android.apps.nexuslauncher".equals(pkg)) {
-            Log.i(TAG, "[DISPATCH] launcher (skipped)");
-        } else if ("com.bytedance.android.doubaoime".equals(pkg)) {
+        // Pixel Launcher hook temporarily disabled - no effect observed
+        // if ("com.google.android.apps.nexuslauncher".equals(pkg)) {
+        //     Log.i(TAG, "[DISPATCH] launcher (skipped)");
+        // } else
+        if ("com.bytedance.android.doubaoime".equals(pkg)) {
             Log.i(TAG, "[DISPATCH] -> installH3_IME");
             installH3_IME();
         } else {
