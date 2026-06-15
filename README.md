@@ -27,7 +27,6 @@
 3. 在 LSPosed 管理器中启用模块
 4. 设置作用域（根据自身设备勾选）：
    - `system` — system_server（导航栏沉浸 + 键盘按钮删除）
-   - `com.google.android.apps.nexuslauncher` — Pixel Launcher
    - **你使用的输入法** — 例如：
      - `com.bytedance.android.doubaoime` — 豆包输入法
      - `com.sohu.inputmethod.sogou.xiaomi` — 搜狗输入法
@@ -41,7 +40,6 @@
 
 | Hook | 目标 | 说明 |
 |------|------|------|
-| H2 | `Resources.getDimensionPixelSize` | 拦截 `navigation_bar_height` 返回 0 |
 | H3.ime | `Resources.getDimensionPixelSize` | 拦截 `input_method_navigation_bar_height` 返回 0 |
 | H6.setFrame | `InsetsSource.setFrame` | 拦截 `TYPE_NAVIGATION_BARS` 的帧，设置高度为 0 |
 | H6.ime | `Resources.getBoolean` | 拦截 `config_imeDrawsImeNavBar` 返回 false |
@@ -50,8 +48,8 @@
 
 ```bash
 # 需要 JDK 17 和 Android SDK
-./gradlew clean assembleDebug
-# APK 输出: app/build/outputs/apk/debug/app-debug.apk
+./gradlew clean assembleRelease
+# APK 输出: app/build/outputs/apk/release/app-release.apk
 ```
 
 ## 已知限制
