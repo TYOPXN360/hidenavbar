@@ -1,0 +1,29 @@
+# Source code (large files)
+source/
+.codegraph/
+
+# Build outputs
+NavHideModule/app/build/
+NavHideModule/build/
+NavHideModule/.gradle/
+
+# Gradle distribution (too large for git)
+NavHideModule/gradle-9.3.1/
+NavHideModule/gradle-9.3.1-bin.zip
+NavHideModule/gradle/wrapper/
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keystore
+NavHideModule/keystore/
+NavHideModule/local.properties
+
+# Logs
+*.log
+*.txt
