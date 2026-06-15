@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <application android:label="NavHide">
-        <meta-data
-            android:name="xposedscope"
-            android:resource="@array/xposed_scope" />
-    </application>
+    <application android:label="NavHide" />
 </manifest>
