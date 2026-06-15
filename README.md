@@ -27,8 +27,8 @@
 2. 安装到设备
 3. 在 LSPosed 管理器中启用模块
 4. 设置作用域（根据自身设备勾选）：
-   - `system` — system_server（导航栏沉浸 + 键盘按钮删除）
-   - **你使用的输入法** — 例如：
+   - `system` — system_server（**小白条强制沉浸**）
+   - **你使用的输入法** — **删除键盘按钮 + 键盘底部抬高空间**，例如：
      - `com.bytedance.android.doubaoime` — 豆包输入法
      - `com.sohu.inputmethod.sogou.xiaomi` — 搜狗输入法
      - `com.baidu.input_mi` — 百度输入法
@@ -39,11 +39,11 @@
 
 ## Hook 原理
 
-| Hook | 目标 | 说明 |
-|------|------|------|
-| H3.ime | `Resources.getDimensionPixelSize` | 拦截 `input_method_navigation_bar_height` 返回 0 |
-| H6.setFrame | `InsetsSource.setFrame` | 拦截 `TYPE_NAVIGATION_BARS` 的帧，设置高度为 0 |
-| H6.ime | `Resources.getBoolean` | 拦截 `config_imeDrawsImeNavBar` 返回 false |
+| Hook | 作用域 | 目标 | 说明 |
+|------|--------|------|------|
+| H3.ime | 输入法进程 | `Resources.getDimensionPixelSize` | 拦截 `input_method_navigation_bar_height` 返回 0 |
+| H6.setFrame | system_server | `InsetsSource.setFrame` | 拦截 `TYPE_NAVIGATION_BARS` 的帧，设置高度为 0 |
+| H6.ime | system_server | `Resources.getBoolean` | 拦截 `config_imeDrawsImeNavBar` 返回 false |
 
 ## 构建
 
